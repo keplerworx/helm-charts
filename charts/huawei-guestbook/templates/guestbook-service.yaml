@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "guestbook.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "guestbook.name" . }}
+    helm.sh/chart: {{ include "guestbook.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+  annotations:
+    kubernetes.io/elb.subnet-id: {{ .Values.service.subnetID }}
+    kubernetes.io/elb.class: union
+    kubernetes.io/session-affinity-mode: SOURCE_IP
+    kubernetes.io/elb.autocreate: '{"type":"{{ .Values.service.lbType }}","bandwidth_name":"cce-bandwidth-{{ include "guestbook.fullname" . }}","bandwidth_chargemode":"{{ .Values.service.bandwidthChargeMode }}","bandwidth_size":{{ .Values.service.bandwidthSize }},"bandwidth_sharetype":"{{ .Values.service.bandwidthShareType }}","eip_type":"{{ .Values.service.EIPType }}","name":"{{ .Release.Name }}"}'
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+  - port: {{ .Values.service.port }}
+    targetPort: http-server
+  selector:
+    app.kubernetes.io/name: {{ include "guestbook.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
