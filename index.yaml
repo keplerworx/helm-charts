@@ -9,4 +9,14 @@ entries:
     urls:
     - https://github.com/tecbrix/helm-charts/releases/download/guestbook-0.2.0/guestbook-0.2.0.tgz
     version: 0.2.0
-generated: "2022-03-10T13:04:58.160536272Z"
+  huaweicloud-guestbook:
+  - apiVersion: v1
+    created: "2022-03-10T13:11:35.289827166Z"
+    description: A Helm chart to deploy Guestbook three tier web application on Huawei
+      Cloud.
+    digest: 30617eb593f9bf5ca92376e7a5a0105fb1a6e9ddde3fd6791d2a8d077baf7720
+    name: huaweicloud-guestbook
+    urls:
+    - https://github.com/tecbrix/helm-charts/releases/download/huaweicloud-guestbook-0.1.0/huaweicloud-guestbook-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-03-10T13:11:35.290011566Z"
