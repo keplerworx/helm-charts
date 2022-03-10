@@ -1,0 +1,12 @@
+apiVersion: v1
+entries:
+  guestbook:
+  - apiVersion: v1
+    created: "2022-03-10T13:04:58.160522671Z"
+    description: A Helm chart to deploy Guestbook three tier web application.
+    digest: f00c1e6699a1e7a483d63c547d889d6dd4c78bee47f6627824cd6f46764f61fe
+    name: guestbook
+    urls:
+    - https://github.com/tecbrix/helm-charts/releases/download/guestbook-0.2.0/guestbook-0.2.0.tgz
+    version: 0.2.0
+generated: "2022-03-10T13:04:58.160536272Z"
