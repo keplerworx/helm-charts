@@ -12,8 +12,8 @@ image:
 # For some dev env (like minikube), you may need to set the type to NodePort
 service:
   type: LoadBalancer
-  port: 80
-  subnetID: 66d977fb-7682-489e-bd0e-85504736e351
+  port: 8000
+  subnetID: dummy-network-id
   affinityMode: SOURCE_IP
   elbClass: union
   lbType: public
