@@ -1,0 +1,27 @@
+# IBM ecommdemo image version ibmcom/ecommdemo:v1
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 2
+
+image:
+  repository: tecbrix/ecommerce-demo
+  tag: v1
+  pullPolicy: Always
+
+# For some dev env (like minikube), you may need to set the type to NodePort
+service:
+  type: LoadBalancer
+  port: 80
+  subnetID: 69bd89c0-3f1c-41f6-982b-eea7cecfa200
+  affinityMode: SOURCE_IP
+  elbClass: union
+  lbType: public
+  bandwidthChargeMode: bandwidth
+  bandwidthShareType: PER
+  bandwidthSize: 5
+  EIPType: 5_bgp
+
+app:
+  type: tcp
+  port: 80
