@@ -1,5 +1,14 @@
 apiVersion: v1
 entries:
+  huaweicloud-ecommdemo:
+  - apiVersion: v1
+    created: "2022-03-15T09:11:12.781573915Z"
+    description: A Helm chart to deploy ecommerce demo application on Huawei Cloud.
+    digest: f0bef94de8a3adfff3c973f722384ec6a79eeee6e8d8b367b838d04c78a208bf
+    name: huaweicloud-ecommdemo
+    urls:
+    - https://github.com/tecbrix/helm-charts/releases/download/huaweicloud-ecommdemo-0.1.0/huaweicloud-ecommdemo-0.1.0.tgz
+    version: 0.1.0
   huaweicloud-guestbook:
   - apiVersion: v1
     created: "2022-03-10T13:11:35.289827166Z"
@@ -10,4 +19,4 @@ entries:
     urls:
     - https://github.com/tecbrix/helm-charts/releases/download/huaweicloud-guestbook-0.1.0/huaweicloud-guestbook-0.1.0.tgz
     version: 0.1.0
-generated: "2022-03-10T13:11:35.290011566Z"
+generated: "2022-03-15T09:11:12.781580415Z"
